@@ -1,6 +1,7 @@
 # File Download As Zip In Core
 File Download As Zip In Core
 **************************************************************///////////////////////////******************************************
+{
  List<SourceFile> sourceFiles = new List<SourceFile>();
             string webRootPath = _hostingEnvironment.WebRootPath;
             string contentRootPath = _hostingEnvironment.ContentRootPath;
@@ -49,3 +50,4 @@ File Download As Zip In Core
             // download the constructed zip
            // Response.AddHeader("Content-Disposition", "attachment; filename=download.zip");
             return File(fileBytes, "application/zip", "Archieve.Zip");
+            }
