@@ -1,8 +1,9 @@
 # File Download As Zip In Core
 File Download As Zip In Core
-**************************************************************///////////////////////////******************************************
-{
- List<SourceFile> sourceFiles = new List<SourceFile>();
+
+
+
+           List<SourceFile> sourceFiles = new List<SourceFile>();
             string webRootPath = _hostingEnvironment.WebRootPath;
             string contentRootPath = _hostingEnvironment.ContentRootPath;
             var provider = new PhysicalFileProvider(contentRootPath);
@@ -25,8 +26,8 @@ File Download As Zip In Core
             // create a working memory stream
             using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
             {
-                // create a zip
-                using (System.IO.Compression.ZipArchive zip = new System.IO.Compression.ZipArchive(memoryStream, System.IO.Compression.ZipArchiveMode.Create, true))
+                 // create a zip
+                using (System.IO.Compression.ZipArchive zip = new System.IO.Compression.ZipArchive(memoryStream,                         System.IO.Compression.ZipArchiveMode.Create, true))
                 {
                     // interate through the source files
                     foreach (SourceFile f in sourceFiles)
